@@ -7,3 +7,6 @@
 - flask 
 - semantic-ui
 - bootstrap
+
+## 
+フリーの動画素材をどうするか
