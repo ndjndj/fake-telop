@@ -49,7 +49,7 @@ def m_slice(path, dir, step, message):
         flag, frame = movie.read()      # 動画から1フレーム読み込む
         check = i == ext_index          # 現在のフレーム番号iが、抽出する指標番号と一致するかチェックする
         time = i / int(fps/step)        # 抽出したフレームの動画内経過時間
- 
+
         if flag == True: # フレームを取得できた時だけこの処理をする
             # もしi番目のフレームが静止画を抽出するものであれば、ファイル名を付けて保存する
             if True in check:
@@ -78,7 +78,7 @@ def m_slice(path, dir, step, message):
     return
 
 dir = 'movie'               # 動画が保存されているディレクトリ
-path = 'telop-sample.mp4'   # ファイル名
+path = 'Woman - 63241.mp4'   # ファイル名
 step = 1                    # 動画内で処理するフレーム間隔（1より大きい整数だと動画が間引かれる）
 
 # [文章, 開始時間, 終了時間]:ここで指定した動画内時間の範囲にテロップ文章を入れる
