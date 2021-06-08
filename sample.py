@@ -36,7 +36,7 @@ def m_slice(path, dir, step, message):
     fps = movie.get(cv2.CAP_PROP_FPS)                   # 動画のFPS（フレームレート：フレーム毎秒）を取得
     W = int(movie.get(cv2.CAP_PROP_FRAME_WIDTH))        # 動画の横幅を取得
     H = int(movie.get(cv2.CAP_PROP_FRAME_HEIGHT))       # 動画の縦幅を取得
-    fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v') # 動画保存時のfourcc設定（mp4用）
+    fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v') #### 動画保存時のfourcc設定（mp4用）
 
     # 動画の仕様（ファイル名、fourcc, FPS, サイズ）
     video = cv2.VideoWriter(out_path, fourcc, int(fps / step), (W, H))
