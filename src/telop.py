@@ -6,4 +6,7 @@ import os
 
 
 class Telop:
-    pass
+
+    def __init__(self):
+        print('initilized Telop instance.')
+        
