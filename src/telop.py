@@ -4,10 +4,9 @@ from PIL import Image, ImageFont, ImageDraw
 import numpy as np
 import os
 
-def dicision_path(dir, path):
-    in_path = os.path.join(*[dir, path])
-    out_path = os.path.join(*[dir, 'out_' + path])
-    return (in_path, out_path)
+def video_path(dir, path):
+    video_path = os.path.join(*[dir, path])
+    return video_path
 
 def import_movie(path):
     movie = cv2.VideoCapture(path)
