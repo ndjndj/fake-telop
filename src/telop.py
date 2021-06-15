@@ -9,7 +9,11 @@ def import_movie(path):
     return movie
 
 def calc_movie_config(movie):
-    num_of_frame = int(movie.get(cv2.CAP_PROP_FRAME_COUNT))
-    fps = movie.get(cv2.CAP_PROP_FPS)
-    
-    pass
+    d = {}
+    d['num_of_frame'] = int(movie.get(cv2.CAP_PROP_FRAME_COUNT))
+    d['fps'] = movie.get(cv2.CAP_PROP_FPS)
+    d['width'] = int(movie.get(cv2.CAP_PROP_FRAME_WIDTH))
+    d['height'] = int(movie.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    d['fourcc'] = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
+    return d
+
