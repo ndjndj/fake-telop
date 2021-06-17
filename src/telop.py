@@ -20,3 +20,6 @@ def calc_movie_config(movie):
     d['height'] = int(movie.get(cv2.CAP_PROP_FRAME_HEIGHT))
     d['fourcc'] = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
     return d
+
+def make_telop(img, message, width, height):
+    return
