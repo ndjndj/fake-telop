@@ -4,7 +4,7 @@ from PIL import Image, ImageFont, ImageDraw
 import numpy as np
 import os
 
-def video_path(dir, path):
+def make_video_path(dir, path):
     video_path = os.path.join(*[dir, path])
     return video_path
 
