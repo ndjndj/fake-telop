@@ -21,5 +21,14 @@ def calc_movie_config(movie):
     d['fourcc'] = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
     return d
 
-def make_telop(img, message, width, height):
-    return
+def make_telop(img, message, img_width, img_height):
+    font_path = 'C:\Windows\Fonts\meiryo.ttc' # need change
+    font_size = 24
+    font = ImageFont.truetype(font_path, font_size)
+    img = Image.fromarray(img)
+    draw = ImageDraw.Draw(img)
+    text_w, text_h = draw.textsize(message, font)
+    position = (int((img_width - text_w) / 2), int(img_height - (font_size * 1.5))) # define telop position
+    draw.text(position, message, font=font, fill=(255, 255, 255, 0))
+    img = np.array(img)
+    return img
