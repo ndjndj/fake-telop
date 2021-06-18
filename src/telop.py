@@ -32,3 +32,11 @@ def make_telop(img, message, img_width, img_height):
     draw.text(position, message, font=font, fill=(255, 255, 255, 0))
     img = np.array(img)
     return img
+
+def make_movie(movie, message, d):
+    j = 0
+    section = message[j]
+
+    for i in range(d['num_of_frame']):
+        flag, frame = movie.read()
+        check = i == ext_index
