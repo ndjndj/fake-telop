@@ -40,3 +40,16 @@ def make_movie(movie, message, d):
     for i in range(d['num_of_frame']):
         flag, frame = movie.read()
         check = i == ext_index
+        time = i / int(fps / step)
+
+        if flag & True in check:
+            if section[1] <= time <= section[2]:
+                pass
+        elif section[1] > time:
+            pass
+        else:
+            if j >= len(message) - 1:
+                pass
+            else:
+                j += 1
+                section = message[j]
