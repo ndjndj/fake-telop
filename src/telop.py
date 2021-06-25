@@ -55,3 +55,6 @@ def make_movie(movie, message, d):
                 section = message[j]
 
     return
+
+def create_telop_movie():
+    return
